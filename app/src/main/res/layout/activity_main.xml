@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Lista de TVs -->
+    <LinearLayout
+        android:id="@+id/viewList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mis TVs"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Aún no hay TVs. Busca en Wi-Fi o agrega una por su IP."
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/tvList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnDiscover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar TVs en Wi-Fi" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+ Agregar TV manualmente" />
+    </LinearLayout>
+
+    <!-- Control remoto -->
+    <ScrollView
+        android:id="@+id/viewRemote"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvRemoteTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TV"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Conectando…" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:stretchColumns="*">
+
+                <TableRow>
+                    <Button android:id="@+id/btnPower" android:text="⏻ Encendido" />
+                    <Button android:id="@+id/btnHome" android:text="⌂ Inicio" />
+                    <Button android:id="@+id/btnSource" android:text="Fuente" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="" />
+                    <Button android:id="@+id/btnUp" android:text="▲" />
+                    <TextView android:text="" />
+                </TableRow>
+
+                <TableRow>
+                    <Button android:id="@+id/btnLeft" android:text="◀" />
+                    <Button android:id="@+id/btnOk" android:text="OK" />
+                    <Button android:id="@+id/btnRight" android:text="▶" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="" />
+                    <Button android:id="@+id/btnDown" android:text="▼" />
+                    <TextView android:text="" />
+                </TableRow>
+
+                <TableRow>
+                    <Button android:id="@+id/btnBack" android:text="← Atrás" />
+                    <Button android:id="@+id/btnMute" android:text="🔇 Silencio" />
+                    <TextView android:text="" />
+                </TableRow>
+
+                <TableRow>
+                    <Button android:id="@+id/btnVolDown" android:text="Vol −" />
+                    <Button android:id="@+id/btnVolUp" android:text="Vol +" />
+                    <TextView android:text="" />
+                </TableRow>
+
+                <TableRow>
+                    <Button android:id="@+id/btnChDown" android:text="Canal −" />
+                    <Button android:id="@+id/btnChUp" android:text="Canal +" />
+                    <TextView android:text="" />
+                </TableRow>
+
+                <TableRow>
+                    <Button android:id="@+id/btn1" android:text="1" />
+                    <Button android:id="@+id/btn2" android:text="2" />
+                    <Button android:id="@+id/btn3" android:text="3" />
+                </TableRow>
+
+                <TableRow>
+                    <Button android:id="@+id/btn4" android:text="4" />
+                    <Button android:id="@+id/btn5" android:text="5" />
+                    <Button android:id="@+id/btn6" android:text="6" />
+                </TableRow>
+
+                <TableRow>
+                    <Button android:id="@+id/btn7" android:text="7" />
+                    <Button android:id="@+id/btn8" android:text="8" />
+                    <Button android:id="@+id/btn9" android:text="9" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="" />
+                    <Button android:id="@+id/btn0" android:text="0" />
+                    <TextView android:text="" />
+                </TableRow>
+            </TableLayout>
+
+            <Button
+                android:id="@+id/btnBackToList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="← Volver a mis TVs" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
